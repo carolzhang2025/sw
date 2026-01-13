@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css" />
+    <style>
+      /* 讓文字區塊垂直居中，並確保它能決定整體高度 */
+      .text-content-warpper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+      }
+      /* 圖片容器：在電腦版（大螢幕）設為絕對定位以對齊左側高度 */
+      .img-warpper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        overflow: hidden;
+      }
+
+      /* 讓圖片像背景一樣填滿容器 */
+      .img-warpper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 關鍵：保持比例裁切填滿 */
+        object-position: center;
+        display: block;
+      }
+      /* RWD 響應式調整 */
+      @media (max-width: 991.98px) {
+        /* 手機版取消絕對定位，改回一般顯示模式 */
+        .img-warpper {
+          height: 250px;
+          min-height: auto;
+        }
+        .img-warpper img {
+          position: relative;
+        }
+        .text-content-warpper {
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="py-5">
+      <div class="container">
+        <div class="row gx-6 align-items-stretch0">
+          <div class="col-12 col-lg-7">
+            <div class="text-content-warpper">
+              <h2 class="fw-bold mb-3">Powering Market Expansion with Channel Partners</h2>
+              <p class="text-dark">Senwaiy partners with collaborators worldwide to accelerate market expansion and drive shared revenue growth through strong, trusted relationships.</p>
+              <p>Channel partners leverage their local market expertise and direct customer engagement to promote solutions, support sales execution, and deliver timely local services that help customers realize value faster.</p>
+              <p class="mb-0">With partners’ market insight, customer networks, and commercial capabilities, Senwaiy strengthens market penetration and consistently converts opportunities into results.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5 mt-4 mt-lg-1">
+            <div class="img-warpper">
+              <img src="./assets/images/partners/content_partner_01.jpg" class="rounded" alt="Partners" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

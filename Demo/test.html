@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="keywords" content="HMI, SCADA, Gateway, Industrial Automation" />
+    <meta name="description" content="Senwaiy specializes in comprehensive smart factory integration solutions. We partner with industry leaders to achieve efficient, reliable digital production, from low-level data acquisition to high-level decision analysis." />
+    <meta name="title" content="test" />
+    <title>test</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <style>
+      /* 基本設定 */
+      :root {
+        --primary-color: #004a99;
+        --text-color: #333;
+        --sub-text-color: #666;
+        --bg-light: #f8f9fa;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      /* 標題樣式 */
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 50px;
+      }
+
+      .section-title span {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--sub-text-color);
+        font-weight: normal;
+        margin-top: 5px;
+      }
+
+      /* 流程外殼 */
+      .process-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      /* 卡片樣式 */
+      .process-card {
+        flex: 1;
+        background: var(--white);
+        padding: 30px 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        border: 1px solid #eee;
+      }
+
+      .process-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary-color);
+      }
+
+      /* 圖示 */
+      .icon-box {
+        width: 70px;
+        height: 70px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        margin: 0 auto 20px;
+      }
+
+      /* 步驟數字 */
+      .step-num {
+        font-weight: bold;
+        color: var(--primary-color);
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+      }
+
+      /* 卡片文字 */
+      .process-card h3 {
+        font-size: 1.2rem;
+        color: var(--text-color);
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+
+      .process-card h3 span {
+        font-size: 0.9rem;
+        color: var(--sub-text-color);
+        font-weight: normal;
+        display: block;
+      }
+
+      .process-card p {
+        font-size: 0.95rem;
+        color: var(--sub-text-color);
+        line-height: 1.6;
+      }
+
+      /* 箭頭樣式 */
+      .arrow {
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+        color: #ccc;
+        font-size: 20px;
+      }
+
+      /* 響應式設定 */
+      @media (max-width: 992px) {
+        .process-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .arrow {
+          transform: rotate(90deg);
+          padding: 20px 0;
+        }
+
+        .process-card {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How CGW Works <span>運作原理</span></h2>
+
+        <div class="process-wrapper">
+          <div class="process-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="step-num">Step 01</div>
+            <h3>下行數據採集<br /><span>Downstream Collection</span></h3>
+            <p>CGW 連結底層多樣化的現場設備與控制系統，即時採集並整合分散的原始數據。</p>
+          </div>
+
+          <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="process-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="step-num">Step 02</div>
+            <h3>協定標準化轉換<br /><span>Protocol Normalization</span></h3>
+            <p>內建強大的轉換引擎，將超過 15 種工業協定轉化為標準格式，解決異質設備溝通隔閡。</p>
+          </div>
+
+          <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="process-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <div class="step-num">Step 03</div>
+            <h3>上行數據發布<br /><span>Upstream Integration</span></h3>
+            <p>將數據透過標準介面（如 OPC UA, MQTT, SECS）發布至上位系統或雲端平台。</p>
+          </div>
+
+          <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="process-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-sitemap"></i>
+            </div>
+            <div class="step-num">Step 04</div>
+            <h3>分散採集、集中管理<br /><span>Scalable Architecture</span></h3>
+            <p>支援兩層式（2-Tier）架構，實現分散式採集與高效的集中化數據管理。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/libs/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/style/style.js"></script>
+    <script src="./assets/style/tab.js"></script>
+  </body>
+</html>

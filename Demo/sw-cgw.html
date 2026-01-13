@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="keywords" content="HMI, SCADA, Gateway, Industrial Automation" />
+    <meta name="description" content="Senwaiy specializes in comprehensive smart factory integration solutions. We partner with industry leaders to achieve efficient, reliable digital production, from low-level data acquisition to high-level decision analysis." />
+    <meta name="title" content="Controller Gateway | Senwaiy" />
+    <title>Controller Gateway | Senwaiy</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <style>
+      @media (min-width: 992px) {
+        /*  Features 變更排列數量 */
+        main .feature-section .card-grid,
+        main .benefits-section .card-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        /*  Customer Cases 變更原本的左右寬度 */
+        main .acc-item {
+          width: 18%;
+        }
+        main .accordion-to-tabs::before {
+          left: 18%;
+        }
+        main .acc-collapse,
+        main .collapsing {
+          width: 82%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="top-bar d-none d-lg-block border-bottom">
+        <div class="container">
+          <ul class="nav justify-content-end small">
+            <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Orders & Licenses</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="#">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div id="fullWidthSearch" class="full-width-search-bar">
+        <div class="container-fluid search-content-wrapper">
+          <div class="search-input-group input-group">
+            <!-- <i class="fa-solid fa-magnifying-glass search-icon"></i> -->
+            <input type="text" class="search-input-field" placeholder="Search by product name or keyword" />
+            <button type="submit" class="btn btn-link" aria-label="Submit search"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+            <button id="closeSearchBtn" class="close-search-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar --><!-- Main Desktop List-->
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm main-nav-container">
+        <div class="container px-3">
+          <a class="navbar-brand fw-bold fs-3 text-dark me-auto" href="index.html"> <img src="./assets/images/basic/logo_Senwaiy.svg" alt="Senwaiy" class="d-inline-block d-inline-block align-middle me-1 mb-1" />Senwaiy </a>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_products" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products & Solution</a>
+                <div class="dropdown-menu" aria-labelledby="nav_products">
+                  <div class="container mega-menu-inner">
+                    <div class="dropdown-groups-wrapper">
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title"><i class="fa-brands fa-codepen me-1"></i>Our Products</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="sw-aug.html">Automatic Universal Gateway (AUG)</a></li>
+                          <li class="dropdown-item"><a href="sw-cgw.html">Controller Gateway (CGW)</a></li>
+                          <li class="dropdown-item"><a href="sw-inspec.html">Inspec</a></li>
+                          <li class="dropdown-item"><a href="sw-mgs.html">Message Gateway System (MGS)</a></li>
+                          <li class="dropdown-item"><a href="sw-modbus-gateway.html">Modbus Gateway</a></li>
+                          <li class="dropdown-item"><a href="sw-rgs.html">Report Generator System (RGS)</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group border-0">
+                        <h6 class="dropdown-group-title"><i class="fa-brands fa-codepen me-1"></i>Partner Products</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item fw-bold">
+                            <h7><span class="dot-indicator"></span>AVEVA</h7>
+                          </li>
+                          <li class="dropdown-item"><a href="#">InTouch HMI</a></li>
+                          <li class="dropdown-item"><a href="#">System Platform</a></li>
+                          <li class="dropdown-item"><a href="#">Historian</a></li>
+                          <li class="dropdown-item"><a href="#">PI System</a></li>
+                          <li class="dropdown-item"><a href="#">AOC</a></li>
+                          <li class="dropdown-item"><a href="#">Flex｜SaaS</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group" style="border: none">
+                        <h6 class="dropdown-group-title">&nbsp;</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item fw-bold">
+                            <h7><span class="dot-indicator"></span>Penguin Solutions</h7>
+                          </li>
+                          <li class="dropdown-item"><a href="#">Stratus ztC Edge®</a></li>
+                          <li class="dropdown-item"><a href="#">Stratus ztC Endurance®</a></li>
+                          <li class="dropdown-item"><a href="#">Stratus ftServer™</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_application-story" role="button" data-bs-toggle="dropdown" aria-expanded="false">Application Story</a>
+                <div class="dropdown-menu" aria-labelledby="nav_application-story">
+                  <div class="container mega-menu-inner">
+                    <div class="dropdown-groups-wrapper">
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">High-Tech Industry</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Wafer Fabrication / Foundry</a></li>
+                          <li class="dropdown-item"><a href="#">Memory Manufacturing</a></li>
+                          <li class="dropdown-item"><a href="#">Assembly, Packaging & Testing / OSAT</a></li>
+                          <li class="dropdown-item"><a href="#">Materials & Equipment</a></li>
+                          <li class="dropdown-item"><a href="#">Display Panels</a></li>
+                        </ul>
+                        <hr class="group-divider" />
+                        <h6 class="dropdown-group-title">Manufacturing</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Food & Beverage</a></li>
+                          <li class="dropdown-item"><a href="#">Pulp & Paper</a></li>
+                          <li class="dropdown-item"><a href="#">Automotive & Transportation Equipment</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">Infrastructure</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Water & Wastewater Treatment</a></li>
+                          <li class="dropdown-item"><a href="#">City & Facility Management</a></li>
+                          <li class="dropdown-item"><a href="#">Transportation Infrastructure</a></li>
+                        </ul>
+                        <hr class="group-divider" />
+                        <h6 class="dropdown-group-title">Oil & Petrochemicals</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Refining / Petrochemical</a></li>
+                          <li class="dropdown-item"><a href="#">Petrochemical Processing</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">Power & Utilities</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Power Generation</a></li>
+                          <li class="dropdown-item"><a href="#">Renewable Energy</a></li>
+                          <li class="dropdown-item"><a href="#">Transmission & Distribution</a></li>
+                        </ul>
+                        <hr class="group-divider" />
+                        <h6 class="dropdown-group-title">Metals & Mining</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Steel Production</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">Life Sciences</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Pharmaceuticals</a></li>
+                          <li class="dropdown-item"><a href="#">Sterile & Injectable Manufacturing</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li> -->
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_partners" role="button" data-bs-toggle="dropdown" aria-expanded="false">Partners</a>
+                <div class="dropdown-menu" aria-labelledby="nav_partners">
+                  <div class="container mega-menu-inner">
+                    <div class="row">
+                      <div class="col col-6">
+                        <div class="card h-100 rounded-5 p-4 bg-gray">
+                          <div class="card-body">
+                            <h4 class="card-title mb-3"><i class="fa-solid fa-people-group fs-1 me-3"></i><span class="fw-bold">Partner Ecosystem</span></h4>
+                            <p class="card-text">Collaboration is at the heart of our success. By combining our technical expertise with the strengths of our global partners, we build a robust ecosystem that drives the future of smart manufacturing.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="dropdown-groups-wrapper ms-2">
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-users-line me-1"></i>Our Partners</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="alliance-partners.html">Alliance Partners</a></li>
+                              <li class="dropdown-item"><a href="channel-partners.html">Channel Partners</a></li>
+                              <li class="dropdown-item"><a href="#">System Integrators</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-users-line me-1"></i>Partner Plan</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="#">Plan Overview</a></li>
+                              <li class="dropdown-item"><a href="#">Become a Partner</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_resourcehub" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resource Hub</a>
+                <div class="dropdown-menu" aria-labelledby="nav_resourcehub">
+                  <div class="container mega-menu-inner">
+                    <div class="row">
+                      <div class="col col-6">
+                        <div class="card h-100 rounded-5 p-4 bg-gray">
+                          <div class="card-body">
+                            <h4 class="card-title mb-3"><i class="fa-solid fa-school fs-1 me-3"></i><span class="fw-bold">Technical Support & Resources</span></h4>
+                            <p class="card-text">Access our comprehensive Resource Hub to stay ahead. From technical documentation and software updates to specialized training, we provide the tools you need to optimize your smart factory operations.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="dropdown-groups-wrapper ms-2">
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-bars-progress me-1"></i>Resource Hub</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="document-library.html">Document Library</a></li>
+                              <li class="dropdown-item"><a href="#">Software Download Center</a></li>
+                              <li class="dropdown-item"><a href="#">Training & Certification Courses</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_aboutus" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                <div class="dropdown-menu" aria-labelledby="nav_aboutus">
+                  <div class="container mega-menu-inner">
+                    <div class="row">
+                      <div class="col col-6">
+                        <div class="card h-100 rounded-5 p-4 bg-gray">
+                          <div class="card-body">
+                            <h4 class="card-title mb-3"><i class="fa-solid fa-handshake fs-1 me-3"></i><span class="fw-bold">Your Trusted Partner</span></h4>
+                            <p class="card-text">With years of expertise as a trusted partner in industrial automation, Senwaiy is a leading provider of integrated products and end-to-end solutions.</p>
+                            <p class="card-text">We help customers across Asia solve complex challenges in smart manufacturing and system integration.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="dropdown-groups-wrapper ms-2">
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-house-chimney-user me-1"></i>About Us</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="about.html">About Senwaiy</a></li>
+                              <li class="dropdown-item"><a href="locations.html">Locations</a></li>
+                              <li class="dropdown-item"><a href="#">News Room</a></li>
+                              <li class="dropdown-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button id="openSearchBtn" class="btn btn-link text-dark p-0 ms-3 d-none d-lg-block" aria-label="Search">
+            <i class="fas fa-search fs-5"></i>
+          </button>
+
+          <button id="mobileMenuBtn" class="mobile-menu-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 遮罩 -->
+    <div id="searchBodyOverlay" class="body-overlay"></div>
+
+    <!-- mobile List-->
+    <div class="offcanvas offcanvas-start mobile-menu-custom" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-body">
+        <div class="accordion accordion-flush" id="mobileAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-products">Products & Solution</button>
+            </h2>
+            <div id="m-products" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item group-title"><i class="fa-brands fa-codepen m-1"></i>Our Products</li>
+                  <li class="list-group-item">
+                    <a href="sw-aug.html" class="list-link">Automatic Universal Gateway (AUG)</a>
+                  </li>
+                  <li class="list-group-item"><a href="sw-cgw.html" class="list-link">Controller Gateway (CGW)</a></li>
+                  <li class="list-group-item"><a href="sw-inspec.html" class="list-link">Inspec</a></li>
+                  <li class="list-group-item"><a href="sw-mgs.html" class="list-link">Message Gateway System (MGS)</a></li>
+                  <li class="list-group-item"><a href="sw-modbus-gateway.html" class="list-link">Modbus Gateway</a></li>
+                  <li class="list-group-item"><a href="sw-rgs.html" class="list-link">Report Generator System (RGS)</a></li>
+                </ul>
+                <hr class="group-divider mx-4" />
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item group-title"><i class="fa-brands fa-codepen m-1"></i>Partner Products</li>
+                  <li class="list-group-item">
+                    <h7><span class="dot-indicator"></span>AVEVA</h7>
+                  </li>
+                  <li class="list-group-item"><a href="#" class="list-link">InTouch HMI</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">System Platform</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Historian</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">PI System</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">AOC</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Flex｜SaaS</a></li>
+
+                  <li class="list-group-item">
+                    <h7><span class="dot-indicator"></span>Penguin Solutions</h7>
+                  </li>
+                  <li class="list-group-item"><a href="#" class="list-link">Stratus ztC Edge®</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Stratus ztC Endurance®</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Stratus ftServer™</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-application-story">Application Story</button>
+            </h2>
+            <div id="m-application-story" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="#" class="list-link">High-Tech Industry</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Manufacturing</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Infrastructure</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Oil & Petrochemicals</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Power & Utilities</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Metals & Mining</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Life Sciences</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-partners">Partners</button>
+            </h2>
+            <div id="m-partners" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="alliance-partners.html" class="ps-3">Alliance Partners</a></li>
+                  <li class="list-group-item"><a href="channel-partners.html" class="ps-3">Channel Partners</a></li>
+                  <li class="list-group-item"><a href="#" class="ps-3">System Integrators</a></li>
+                  <li class="list-group-item"><a href="#" class="ps-3">Partner Plan Overview</a></li>
+                  <li class="list-group-item"><a href="#" class="ps-3">Become a Partner</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-resourcehub">Resource Hub</button>
+            </h2>
+            <div id="m-resourcehub" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="document-library.html" class="list-link">Document Library</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Software Download Center</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Training & Certification Courses</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-aboutus">About Us</button>
+            </h2>
+            <div id="m-aboutus" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a class="list-link" href="about.html">About Senwaiy</a></li>
+                  <li class="list-group-item"><a class="list-link" href="locations.html">Locations</a></li>
+                  <li class="list-group-item"><a class="list-link" href="news.html">News Room</a></li>
+                  <li class="list-group-item"><a class="list-link" href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-auto bs-bg-dark text-white mobile-footer-links">
+          <a href="support.html" class="border-bottom">Support</a>
+          <a href="#" class="border-bottom">Orders & Licenses</a>
+          <a href="contact.html" class="">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero-basic text-white hero-banner">
+        <picture class="hero-bg-wrapper">
+          <source media="(min-width: 768px)" srcset="./assets/images/hero-banner/bg_banner_product_02.jpg" />
+          <img src="./assets/images/hero-banner/m_bg_banner_product_02.jpg" alt="Hero Banner" class="hero-bg-img" />
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative h-100 d-flex flex-column justify-content-center" style="z-index: 5">
+          <div class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                <li class="breadcrumb-item text-white" aria-current="page">Products & Solution</li>
+                <li class="breadcrumb-item text-white" aria-current="page">Our Products</li>
+                <li class="breadcrumb-item text-white" aria-current="page">Controller Gateway (CGW)</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="hero-banner-content">
+            <div class="row align-items-center">
+              <div class="col-11 col-lg-7 pb-2 pt-3">
+                <h1 class="hero-title fw-bold mb-1 mb-lg-3">Controller Gatewayy</h1>
+                <p class="hero-desc">Integrate diverse industrial protocols for effortless cloud connectivity and IIoT transformation.</p>
+                <!-- <a href="#" class="btn btn-light fw-bold px-4 py-2">Start your journey</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- page content -->
+      <div class="page-content mt-1 mt-lg-5">
+        <!-- 產品定義 (Product Definition) -->
+        <section class="definition-section">
+          <div class="container">
+            <div class="row gx-5 align-items-stretch">
+              <div class="col col-12">
+                <div class="text-content-warpper">
+                  <h2 class="">What is CGW ?</h2>
+                  <p>
+                    CGW serves as the communication backbone for industrial environments. Featuring a high-performance embedded architecture with up to 16 serial ports and dual Ethernet interfaces, it simultaneously drives over 15 mainstream industrial protocols. By unifying diverse brands and
+                    inconsistent communication specifications across on-site PLCs, sensors, and meters, CGW standardizes device data onto a single, unified platform—building a robust foundation for IIoT connectivity.
+                  </p>
+                  <p class="mb-0">
+                    Designed to address digital transformation challenges, CGW adopts a "Non-PC architecture" that eliminates driver failures caused by OS updates and complex DCOM configurations. Its intuitive web-based interface allows engineers to complete data mapping effortlessly without
+                    programming. Coupled with powerful self-diagnosis and communication logging, CGW ensures precise troubleshooting and high data availability, providing the most stable and reliable bridge to a smart factory.
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="col col-12 col-sm-5 mt-3 mt-lg-1">
+                <div class="img-warpper">
+                  <img src="./assets/images/product/content_sw-aug_01.jpg" class="img-rounded" alt="..." />
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 特色 (Features) -->
+        <section class="feature-section bg-gray">
+          <div class="container">
+            <h2 class="">Features</h2>
+            <div class="card-grid">
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h4 class="card-title">Universal Protocol Integration</h4>
+                <p class="">Supports 15+ industrial protocols like Mitsubishi, Siemens, and AB, bridging communication gaps across diverse equipment.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                <h4 class="card-title">Browser-Based Configuration</h4>
+                <p class="">Configuration via web browser eliminates software installation, significantly streamlining on-site deployment.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                <h4 class="card-title">Standalone Embedded Architecture</h4>
+                <p class="">Non-PC architecture avoids risks from OS updates or DCOM issues, ensuring superior system stability.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-plug-circle-plus"></i></div>
+                <h4 class="card-title">Flexible Hardware Scalabilit</h4>
+                <p class="">Dual Ethernet and up to 16 serial ports, with optional 4G/Wi-Fi for versatile networking and cloud connectivity.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-clipboard-list"></i></div>
+                <h4 class="card-title">Smart Diagnostics & Logging</h4>
+                <p class="">Real-time monitoring and built-in logging enable precise troubleshooting and higher maintenance efficiency.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h4 class="card-title">Precision Time Sync & Calibration</h4>
+                <p class="">Built-in NTP calibration ensures synchronized time-stamping across systems, guaranteeing data accuracy for analysis.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 運作方式 (How it Works) -->
+        <section class="how-it-works-section">
+          <div class="container">
+            <div class="row gx-5">
+              <div class="col col-12 col-sm-12">
+                <h2 class="">How CGW works</h2>
+                <p>
+                  In the architecture of smart manufacturing, the efficiency of data flow directly determines the quality of decision-making. The Smart Gateway CGW (Controller Gateway) acts as a vital bridge between the industrial field and upper-tier systems. Through high-performance conversion and
+                  transmission mechanisms, it transforms fragmented device protocols into standardized information streams. The following four key steps demonstrate how CGW helps enterprises build a stable data foundation, seamlessly completing the journey from device connectivity to digital
+                  transformation.
+                </p>
+
+                <div class="process-container">
+                  <div class="step-card">
+                    <div class="step-num bg-1">01</div>
+                    <h4>Downstream Data Collection</h4>
+                    <p>CGW connects downstream to various field devices and control systems to collect and consolidate real-time data from the source.</p>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h4>Protocol Normalization</h4>
+                    <p>The built-in engine normalizes over 15 industrial protocols into standardized formats, eliminating communication barriers between diverse equipment.</p>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num bg-1">03</div>
+                    <h4>Upstream Integration</h4>
+                    <p>CGW converts and publishes data into standard interfaces (e.g., OPC UA, MQTT, SECS), making it seamlessly available for upper-layer systems and the cloud.</p>
+                  </div>
+                  <div class="step-card last-step">
+                    <div class="step-num">04</div>
+                    <h4>Scalable 2-Tier Architecture</h4>
+                    <p>Construct a 2-tier architecture for distributed data collection across multiple sites while maintaining efficient, centralized data management.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 效益 (Benefits) -->
+        <section class="benefits-section bg-gray">
+          <div class="container">
+            <h2 class="">Benefits</h2>
+            <div class="card-grid">
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                <h4 class="card-title">Maximize Asset ROI</h4>
+                <!-- <p class="">Streamline Management & Reduce Costs.</p> -->
+                <p class="">Extend legacy asset life. Bridge 15+ protocols seamlessly to avoid costly hardware replacements and maximize existing infrastructure value.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+                <h4 class="card-title">Rapid Deployment</h4>
+                <!-- <p class="">Bridge Data Silos for Digital Growth.</p> -->
+                <p class="">Accelerate setup with zero installation. Web-based configuration eliminates software friction, shortening deployment cycles and reducing technical training costs.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4 class="card-title">Non-Stop Uptime</h4>
+                <!-- <p class="">Boost Reliability & Minimize Downtime.</p> -->
+                <p>Ensure 24/7 reliability. Our PC-less, embedded architecture eliminates OS crashes and DCOM issues, minimizing the risk of costly unplanned downtime.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
+                <h4 class="card-title">Scalable Growth</h4>
+                <!-- <p class="">Accelerate Development & IT/OT Synergy.</p> -->
+                <p>Scale with confidence. Versatile ports and wireless options provide the agility to adapt to new networking demands and cloud integration as you grow.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h4 class="card-title">Intelligent Maintenance</h4>
+                <!-- <p class="">Accelerate Development & IT/OT Synergy.</p> -->
+                <p>Optimize maintenance with data. Real-time logging transforms raw data into actionable insights, shortening MTTR and boosting team productivity.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <h4 class="card-title">Data Integrity</h4>
+                <!-- <p class="">Accelerate Development & IT/OT Synergy.</p> -->
+                <p>Trust your analytics. Precision NTP calibration ensures synchronized time-stamping, providing the accurate data foundation needed for reliable business forecasting.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 支援項目 (Support Items) -->
+        <section class="support-items-section">
+          <div class="container">
+            <h2 class="">Support Items</h2>
+            <div class="summary-table-container">
+              <table class="summary-table table-border table-headless">
+                <thead>
+                  <tr>
+                    <th width="30%">Serial</th>
+                    <th width="30%">Ethernet</th>
+                    <th width="">Protocol</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>Allen-Bradley DF1：SLC500</li>
+                        <li>Mitsubishi：A Series, Q Series, QnA, FX, FX0, FX0N, FX0S,FX1N, FX1S, FX2N, FX2C, FX2NC, FX3G, FX3U, FXFORM1 Series</li>
+                        <li>Modbus：ASCII, RTU</li>
+                        <li>Omron：CS Series, CJ Series, CV Series</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>Allen-Bradley CIP：SLC500, CompactLogix, MicroLogix , ControlLogix</li>
+                        <li>Siemens S7：S7-300, S7-400, S7-1200, S7-1500</li>
+                        <li>Mitsubishi：FX Series, A Series, Q Series, QnA Series, FX5U Series</li>
+                        <li>GE SRTP：VersaMax, 90-30, 90-70, RX-3i, RX-7i</li>
+                        <li>Modbus：TCP</li>
+                        <li>Omron Fins：CS Series, CJ Series, CV Series</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>OPC：OPC UA</li>
+                        <li>Modbus：Modbus Serial / Modbus TCP</li>
+                        <li>SECS：SECS HSMS</li>
+                        <li>AVEVA：AVEVA SuiteLink</li>
+                        <li>EBARA：Dry Pump A series, Dry Vacuum Pump ESX series</li>
+                        <li>EDWARDS：Dry Pump iM Serial</li>
+                        <li>Kashiyama：Dry Pump MU Serial, Dry Vacuum Pump PC201</li>
+                        <li>Powerware UPS：ASCII Data</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- <div class="summary-table-container">
+              <table class="summary-table table-border">
+                <thead>
+                  <tr>
+                    <th style="width: 15%">Category</th>
+                    <th>Key Support Highlights</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-title">Data Server</td>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>DDE Server</li>
+                        <li>Modbus TCP Slave</li>
+                        <li>OPC DA / UA Server</li>
+                        <li>RTD Server (Web API)</li>
+                        <li>Database Exchange Server</li>
+                        <li>PI System Data Archive</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-title">IO Adapter</td>
+                    <td>
+                      <p class="fw-bold mb-0">Software</p>
+                      <ul class="grid-list">
+                        <li>OPC DA / UA Client</li>
+                        <li>Microsoft SQL Client</li>
+                        <li>Web API Client (SOAP / REST)</li>
+                        <li>InTouch Database External Access (IDEA)</li>
+                        <li>AVEVA Predictive Analytics Web API Client</li>
+                        <li>AVEVA Historian Client</li>
+                        <li>SuiteLink / DDE Client</li>
+                      </ul>
+                      <p class="fw-bold mb-0">PLC</p>
+                      <ul class="grid-list mb-0">
+                        <li>Allen-Bradley TCP (Ethernet)</li>
+                        <li>Yaskawa CP218IF (Ethernet)</li>
+                        <li>FATEK FBs Series (Serial)</li>
+                        <li>Emerson (GE) SRTP / SNP (Ethernet / Serial)</li>
+                        <li>Keyence KV Series (Ethernet)</li>
+                        <li>Modbus Master (Ethernet / Serial)</li>
+                        <li>MELSEC Q / iQ-R / iQ-F / A / FX</li>
+                        <li>Omron FINS (Ethernet / Serial)</li>
+                        <li>Siemens S7 Series (Ethernet)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <p class="text-desc text-center">※ The above list highlights common industrial protocols supported by CGW. For a comprehensive list of all supported items, please refer to the product brochure.</p>
+          </div>
+        </section>
+
+        <!-- 軟體/功能授權選項 (Licensing Options) -->
+        <section class="licensing-options-section bg-gray">
+          <div class="container">
+            <h2 class="">Licensing Options</h2>
+            <div class="summary-table-container">
+              <table class="summary-table table-border">
+                <thead>
+                  <tr>
+                    <th>Plan</th>
+                    <th>Description</th>
+                    <th>Ideal For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-title fw-bold">Basic Insight (nPLC)</td>
+                    <td>Focused on sensors and meters. An economical choice to transform field data into actionable insights.</td>
+                    <td>Environmental monitoring, energy management, and simple status tracking.</td>
+                  </tr>
+                  <tr>
+                    <td class="table-title fw-bold">Logic Pro (PLC)</td>
+                    <td>Specialized for PLC integration. Ensures reliable data flow across diverse industrial controllers for seamless automation.</td>
+                    <td>Factory automation, production line monitoring, and multi-brand PLC integration.</td>
+                  </tr>
+                  <tr>
+                    <td class="table-title fw-bold">Unlimited Access (Full Function)</td>
+                    <td>Total protocol support without limits. Eliminates all communication barriers for comprehensive enterprise digital transformation.</td>
+                    <td>Large-scale smart factories, complex multi-equipment sites, and future-proof DX projects.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-desc text-center">※ For more details about CGW, welcome to download the the product brochure!</p>
+          </div>
+        </section>
+
+        <!-- 客戶案例 (Customer Cases) -->
+        <section class="story-intro-section">
+          <div class="container">
+            <h2 class="text-left text-lg-center mb-2 mb-lg-3 mt-0">Customer story</h2>
+            <h3 class="text-left text-lg-center mb-2 mb-lg-5 mt-0">Sub-Fab Equipment Integration: Optimizing Monitoring for 2,000+ Dry Pumps and Scrubbers</h3>
+            <div class="accordion-to-tabs" id="storyAccordion">
+              <div class="acc-item">
+                <div class="acc-header" id="heading-background">
+                  <button class="acc-button active" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-background">Background</button>
+                </div>
+                <div id="collapse-background" class="acc-collapse collapse show" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="row gx-5">
+                      <div class="col col-12 col-sm-7">
+                        <div class="intro-text">
+                          <p class="">
+                            In semiconductor manufacturing, Dry Pumps and Scrubbers are vital for production continuity. As an industry leader, the customer prioritizes the operational efficiency of these systems and furnace tubes while optimizing data visualization to safeguard high yields and
+                            long-term operational resilience.
+                          </p>
+                          <p class="mb-0">With over 2,000 devices in the Sub-Fab, 24/7 continuous monitoring is mandatory. This project establishes a stable, scalable IIoT communication core to unify data from massive devices and prevent unplanned production downtime.</p>
+                        </div>
+                      </div>
+                      <div class="col col-12 col-sm-5 mt-3 mt-lg-1">
+                        <div class="img-warpper">
+                          <img src="./assets/images/product/content_sw-cgw_01.jpg" class="img-rounded" alt="..." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <div class="acc-header" id="heading-challenge">
+                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-challenge">Challenge</button>
+                </div>
+                <div id="collapse-challenge" class="acc-collapse collapse" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="intro-text">
+                      <p class="mb-1">
+                        To diversify risks, the customer utilizes multiple brands of Dry Pumps and Local Scrubbers, resulting in fragmented and incompatible communication protocols. With over 2,000 devices forming a massive system on-site, the resulting data load has severely overwhelmed monitoring
+                        PCs, leading to frequent disconnections and preventing maintenance teams from accessing real-time operational status. As production scales up, the customer faces two critical challenges :
+                      </p>
+                      <ul class="crosshairs-list">
+                        <li>
+                          <p class="mb-0">Protocol Fragmentation from Multiple Vendors</p>
+                          <p class="">While multi-vendor sourcing mitigates supply chain risks, it creates a landscape of incompatible protocols, making unified plant-wide data acquisition extremely difficult.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Massive Connectivity Overloading PCs</p>
+                          <p class="">Directly connecting over 2,000 devices to monitoring PCs causes CPU overload from massive data packets. This leads to frequent system crashes, preventing the acquisition of real-time equipment status.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <div class="acc-header" id="heading-solution">
+                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-solution">Solution</button>
+                </div>
+                <div id="collapse-solution" class="acc-collapse collapse" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="intro-text">
+                      <p class="mb-1">The customer implemented CGW as the plant-wide core, replacing centralized loads with a distributed architecture for highly reliable monitoring.</p>
+                      <ul class="step-list">
+                        <li>
+                          <p class="mb-0">High-Efficiency Edge Acquisition</p>
+                          <p class="">Connects directly to Dry Pump and LSC controllers via CGW for stable, real-time data collection.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">System Load Offloading</p>
+                          <p class="mb-0">Uses CGW as a relay to reduce direct PC-to-machine connections, offloading the CPU burden from the host.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Protocol Integration</p>
+                          <p class="mb-0">Consolidates diverse protocols into a unified platform, enhancing connection quality and data consistency.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <div class="acc-header" id="heading-benefits">
+                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-benefits">Benefits</button>
+                </div>
+                <div id="collapse-benefits" class="acc-collapse collapse" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="intro-text">
+                      <p class="">CGW optimizes the communication architecture, transforming fragile monitoring links into a highly resilient and scalable digital management system.</p>
+                      <ul class="check-list">
+                        <li>
+                          <p class="mb-0">Extreme Stability</p>
+                          <p class="">Resolves overload-induced disconnections, ensuring 24/7 stable operation and zero data loss.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Seamless Integration</p>
+                          <p class="mb-0">Unifies multi-brand protocols for single-platform monitoring of heterogeneous devices.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Maintenance Efficiency</p>
+                          <p class="mb-0">Lowers crash risks by replacing complex PC setups, enabling rapid onboarding via pre-configured modules.</p>
+                        </li>
+                      </ul>
+                      <p class="mb-0">"CGW solved our disconnection issues and established forward-looking digital resilience for the entire plant." — Project Lead</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-expert" style="background-image: linear-gradient(to right, rgba(4, 22, 31, 0.7) 0%, rgba(4, 22, 31, 0.1) 50%, rgba(0, 0, 0, 0) 100%), url('./assets/images/basic/bg_content-expert_01.jpg'); background-size: cover; background-position: center center">
+          <div class="container">
+            <div class="expert-card-wrapper d-flex">
+              <div class="expert-card">
+                <p class="expert-card-tagline"><span class="dot-indicator"></span>Begin Your Smart Factory Journey</p>
+                <h2 class="expert-card-title fw-bold">Connect with Our Experts</h2>
+                <p class="expert-card-text">To learn more about how we plan, integrate, and build automation and smart factory systems tailored to your needs. Feel free to contact our experts!</p>
+                <a href="contact.html" class="btn btn-expert">Let's Talk</a>
+                <a href="download/product-brochure/S1_Brochure_CGW_EN_251218.pdf" class="btn btn-outline-expert" target="_blank">Download Brochure </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white-50">
+      <div class="container py-3 py-lg-5">
+        <div class="row">
+          <!-- logo、Contact Information -->
+          <div class="col-12 col-lg-4 basic-info-container">
+            <div class="footer-branding">
+              <a class="fw-bold fs-4 text-light me-auto" href="#"><img src="./assets/images/basic/logo_Senwaiy.svg" alt="Senwaiy" height="36" class="footer-logo d-inline-block d-inline-block align-middle me-1 mb-1" />Senwaiy</a>
+            </div>
+            <p class="footer-desc mt-0 p-1">Overcome efficiency, productivity, safety and costs challenges through automation and integration solutions with Senwaiy.</p>
+            <div>
+              <p class="fw-bold mb-2">Get in Touch with Senwaiy Singapore</p>
+              <div class="footer-contact-info">
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
+                    <a class="footer_link" href="mailto:info@senwaiytech.com" title="sending the email"><i class="footer_link-icon fa-solid fa-envelope"></i><span class="footer_link-text">info@senwaiytech.com</span></a>
+                  </div>
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
+                    <a class="footer_link mb-2" href="tel:+65-6993-5188" title="make a phone call"><i class="footer_link-icon fas fa-phone-alt"></i><span class="footer_link-text">+65-6993-5188</span></a>
+                  </div>
+                </div>
+                <a class="footer_link mb-2" href="https://maps.app.goo.gl/i12ESiq9sxoMmF4Q7" title="address"><i class="footer_link-icon fa-solid fa-location-dot"></i><span class="footer_link-text">No. 21 Bukit Batok Crescent #13-77, Wcega Tower, Singapore 658065</span></a>
+              </div>
+            </div>
+            <div class="footer-social-links d-flex gap-3 pt-2">
+              <a href="https://www.linkedin.com/company/senwaiy" target="_blank" aria-label="LinkedIn" class="text-white-50">
+                <i class="fa-brands fa-square-linkedin"></i>
+              </a>
+              <a href="https://www.youtube.com/@Senwaiy" target="_blank" aria-label="YouTube" class="text-white-50">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-12 col-lg-8 quick-links-container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h6 class="footer-column-title">Products & Solution</h6>
+                <ul class="footer-link-list">
+                  <li><a href="sw-aug.html">Automatic Universal Gateway (AUG)</a></li>
+                  <li><a href="sw-cgw.html">Controller Gateway (CGW)</a></li>
+                  <li><a href="sw-inspec.html">Inspec</a></li>
+                  <li><a href="sw-mgs.html">Message Gateway System (MGS)</a></li>
+                  <li><a href="sw-modbus-gateway.html">Modbus Gateway</a></li>
+                  <li><a href="sw-rgs.html">Report Generator System (RGS)</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-3">
+                <h6 class="footer-column-title">Partners</h6>
+                <ul class="footer-link-list">
+                  <li><a href="#">Program Overview</a></li>
+                  <li><a href="alliance-partners.html">Alliance Partners</a></li>
+                  <li><a href="channel-partners.html">Channel Partners</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-3">
+                <h6 class="footer-column-title">Company</h6>
+                <ul class="footer-link-list">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="locations.html">Locations</a></li>
+                  <li><a href="news.html">News Room</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-copyright">
+        <p class="mb-0 text-center">©2025 Senwaiy Tech. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./assets/libs/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/style/style.js"></script>
+    <script src="./assets/style/tab.js"></script>
+  </body>
+</html>

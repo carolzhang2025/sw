@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="keywords" content="HMI, SCADA, Gateway, Industrial Automation" />
+    <meta name="description" content="Senwaiy specializes in comprehensive smart factory integration solutions. We partner with industry leaders to achieve efficient, reliable digital production, from low-level data acquisition to high-level decision analysis." />
+    <meta name="title" content="Message Gateway System | Senwaiy" />
+    <title>Message Gateway System | Senwaiy</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <style>
+      @media (min-width: 992px) {
+        /*  Features 變更排列數量 */
+        main .feature-section .card-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        /*  Customer Cases 變更原本的左右寬度 */
+        main .acc-item {
+          width: 18%;
+        }
+        main .accordion-to-tabs::before {
+          left: 18%;
+        }
+        main .acc-collapse,
+        main .collapsing {
+          width: 82%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="top-bar d-none d-lg-block border-bottom">
+        <div class="container">
+          <ul class="nav justify-content-end small">
+            <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Orders & Licenses</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="#">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div id="fullWidthSearch" class="full-width-search-bar">
+        <div class="container-fluid search-content-wrapper">
+          <div class="search-input-group input-group">
+            <!-- <i class="fa-solid fa-magnifying-glass search-icon"></i> -->
+            <input type="text" class="search-input-field" placeholder="Search by product name or keyword" />
+            <button type="submit" class="btn btn-link" aria-label="Submit search"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+            <button id="closeSearchBtn" class="close-search-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar --><!-- Main Desktop List-->
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm main-nav-container">
+        <div class="container px-3">
+          <a class="navbar-brand fw-bold fs-3 text-dark me-auto" href="index.html"> <img src="./assets/images/basic/logo_Senwaiy.svg" alt="Senwaiy" class="d-inline-block d-inline-block align-middle me-1 mb-1" />Senwaiy </a>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_products" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products & Solution</a>
+                <div class="dropdown-menu" aria-labelledby="nav_products">
+                  <div class="container mega-menu-inner">
+                    <div class="dropdown-groups-wrapper">
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title"><i class="fa-brands fa-codepen me-1"></i>Our Products</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="sw-aug.html">Automatic Universal Gateway (AUG)</a></li>
+                          <li class="dropdown-item"><a href="sw-cgw.html">Controller Gateway (CGW)</a></li>
+                          <li class="dropdown-item"><a href="sw-inspec.html">Inspec</a></li>
+                          <li class="dropdown-item"><a href="sw-mgs.html">Message Gateway System (MGS)</a></li>
+                          <li class="dropdown-item"><a href="sw-modbus-gateway.html">Modbus Gateway</a></li>
+                          <li class="dropdown-item"><a href="sw-rgs.html">Report Generator System (RGS)</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group border-0">
+                        <h6 class="dropdown-group-title"><i class="fa-brands fa-codepen me-1"></i>Partner Products</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item fw-bold">
+                            <h7><span class="dot-indicator"></span>AVEVA</h7>
+                          </li>
+                          <li class="dropdown-item"><a href="#">InTouch HMI</a></li>
+                          <li class="dropdown-item"><a href="#">System Platform</a></li>
+                          <li class="dropdown-item"><a href="#">Historian</a></li>
+                          <li class="dropdown-item"><a href="#">PI System</a></li>
+                          <li class="dropdown-item"><a href="#">AOC</a></li>
+                          <li class="dropdown-item"><a href="#">Flex｜SaaS</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group" style="border: none">
+                        <h6 class="dropdown-group-title">&nbsp;</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item fw-bold">
+                            <h7><span class="dot-indicator"></span>Penguin Solutions</h7>
+                          </li>
+                          <li class="dropdown-item"><a href="#">Stratus ztC Edge®</a></li>
+                          <li class="dropdown-item"><a href="#">Stratus ztC Endurance®</a></li>
+                          <li class="dropdown-item"><a href="#">Stratus ftServer™</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_application-story" role="button" data-bs-toggle="dropdown" aria-expanded="false">Application Story</a>
+                <div class="dropdown-menu" aria-labelledby="nav_application-story">
+                  <div class="container mega-menu-inner">
+                    <div class="dropdown-groups-wrapper">
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">High-Tech Industry</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Wafer Fabrication / Foundry</a></li>
+                          <li class="dropdown-item"><a href="#">Memory Manufacturing</a></li>
+                          <li class="dropdown-item"><a href="#">Assembly, Packaging & Testing / OSAT</a></li>
+                          <li class="dropdown-item"><a href="#">Materials & Equipment</a></li>
+                          <li class="dropdown-item"><a href="#">Display Panels</a></li>
+                        </ul>
+                        <hr class="group-divider" />
+                        <h6 class="dropdown-group-title">Manufacturing</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Food & Beverage</a></li>
+                          <li class="dropdown-item"><a href="#">Pulp & Paper</a></li>
+                          <li class="dropdown-item"><a href="#">Automotive & Transportation Equipment</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">Infrastructure</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Water & Wastewater Treatment</a></li>
+                          <li class="dropdown-item"><a href="#">City & Facility Management</a></li>
+                          <li class="dropdown-item"><a href="#">Transportation Infrastructure</a></li>
+                        </ul>
+                        <hr class="group-divider" />
+                        <h6 class="dropdown-group-title">Oil & Petrochemicals</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Refining / Petrochemical</a></li>
+                          <li class="dropdown-item"><a href="#">Petrochemical Processing</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">Power & Utilities</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Power Generation</a></li>
+                          <li class="dropdown-item"><a href="#">Renewable Energy</a></li>
+                          <li class="dropdown-item"><a href="#">Transmission & Distribution</a></li>
+                        </ul>
+                        <hr class="group-divider" />
+                        <h6 class="dropdown-group-title">Metals & Mining</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Steel Production</a></li>
+                        </ul>
+                      </div>
+                      <div class="dropdown-group">
+                        <h6 class="dropdown-group-title">Life Sciences</h6>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a href="#">Pharmaceuticals</a></li>
+                          <li class="dropdown-item"><a href="#">Sterile & Injectable Manufacturing</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li> -->
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_partners" role="button" data-bs-toggle="dropdown" aria-expanded="false">Partners</a>
+                <div class="dropdown-menu" aria-labelledby="nav_partners">
+                  <div class="container mega-menu-inner">
+                    <div class="row">
+                      <div class="col col-6">
+                        <div class="card h-100 rounded-5 p-4 bg-gray">
+                          <div class="card-body">
+                            <h4 class="card-title mb-3"><i class="fa-solid fa-people-group fs-1 me-3"></i><span class="fw-bold">Partner Ecosystem</span></h4>
+                            <p class="card-text">Collaboration is at the heart of our success. By combining our technical expertise with the strengths of our global partners, we build a robust ecosystem that drives the future of smart manufacturing.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="dropdown-groups-wrapper ms-2">
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-users-line me-1"></i>Our Partners</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="alliance-partners.html">Alliance Partners</a></li>
+                              <li class="dropdown-item"><a href="channel-partners.html">Channel Partners</a></li>
+                              <li class="dropdown-item"><a href="#">System Integrators</a></li>
+                            </ul>
+                          </div>
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-users-line me-1"></i>Partner Plan</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="#">Plan Overview</a></li>
+                              <li class="dropdown-item"><a href="#">Become a Partner</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_resourcehub" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resource Hub</a>
+                <div class="dropdown-menu" aria-labelledby="nav_resourcehub">
+                  <div class="container mega-menu-inner">
+                    <div class="row">
+                      <div class="col col-6">
+                        <div class="card h-100 rounded-5 p-4 bg-gray">
+                          <div class="card-body">
+                            <h4 class="card-title mb-3"><i class="fa-solid fa-school fs-1 me-3"></i><span class="fw-bold">Technical Support & Resources</span></h4>
+                            <p class="card-text">Access our comprehensive Resource Hub to stay ahead. From technical documentation and software updates to specialized training, we provide the tools you need to optimize your smart factory operations.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="dropdown-groups-wrapper ms-2">
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-bars-progress me-1"></i>Resource Hub</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="document-library.html">Document Library</a></li>
+                              <li class="dropdown-item"><a href="#">Software Download Center</a></li>
+                              <li class="dropdown-item"><a href="#">Training & Certification Courses</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" id="nav_aboutus" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                <div class="dropdown-menu" aria-labelledby="nav_aboutus">
+                  <div class="container mega-menu-inner">
+                    <div class="row">
+                      <div class="col col-6">
+                        <div class="card h-100 rounded-5 p-4 bg-gray">
+                          <div class="card-body">
+                            <h4 class="card-title mb-3"><i class="fa-solid fa-handshake fs-1 me-3"></i><span class="fw-bold">Your Trusted Partner</span></h4>
+                            <p class="card-text">With years of expertise as a trusted partner in industrial automation, Senwaiy is a leading provider of integrated products and end-to-end solutions.</p>
+                            <p class="card-text">We help customers across Asia solve complex challenges in smart manufacturing and system integration.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="dropdown-groups-wrapper ms-2">
+                          <div class="dropdown-group">
+                            <h6 class="dropdown-group-title"><i class="fa-solid fa-house-chimney-user me-1"></i>About Us</h6>
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item"><a href="about.html">About Senwaiy</a></li>
+                              <li class="dropdown-item"><a href="locations.html">Locations</a></li>
+                              <li class="dropdown-item"><a href="#">News Room</a></li>
+                              <li class="dropdown-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button id="openSearchBtn" class="btn btn-link text-dark p-0 ms-3 d-none d-lg-block" aria-label="Search">
+            <i class="fas fa-search fs-5"></i>
+          </button>
+
+          <button id="mobileMenuBtn" class="mobile-menu-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 遮罩 -->
+    <div id="searchBodyOverlay" class="body-overlay"></div>
+
+    <!-- mobile List-->
+    <div class="offcanvas offcanvas-start mobile-menu-custom" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-body">
+        <div class="accordion accordion-flush" id="mobileAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-products">Products & Solution</button>
+            </h2>
+            <div id="m-products" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item group-title"><i class="fa-brands fa-codepen m-1"></i>Our Products</li>
+                  <li class="list-group-item">
+                    <a href="sw-aug.html" class="list-link">Automatic Universal Gateway (AUG)</a>
+                  </li>
+                  <li class="list-group-item"><a href="sw-cgw.html" class="list-link">Controller Gateway (CGW)</a></li>
+                  <li class="list-group-item"><a href="sw-inspec.html" class="list-link">Inspec</a></li>
+                  <li class="list-group-item"><a href="sw-mgs.html" class="list-link">Message Gateway System (MGS)</a></li>
+                  <li class="list-group-item"><a href="sw-modbus-gateway.html" class="list-link">Modbus Gateway</a></li>
+                  <li class="list-group-item"><a href="sw-rgs.html" class="list-link">Report Generator System (RGS)</a></li>
+                </ul>
+                <hr class="group-divider mx-4" />
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item group-title"><i class="fa-brands fa-codepen m-1"></i>Partner Products</li>
+                  <li class="list-group-item">
+                    <h7><span class="dot-indicator"></span>AVEVA</h7>
+                  </li>
+                  <li class="list-group-item"><a href="#" class="list-link">InTouch HMI</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">System Platform</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Historian</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">PI System</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">AOC</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Flex｜SaaS</a></li>
+
+                  <li class="list-group-item">
+                    <h7><span class="dot-indicator"></span>Penguin Solutions</h7>
+                  </li>
+                  <li class="list-group-item"><a href="#" class="list-link">Stratus ztC Edge®</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Stratus ztC Endurance®</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Stratus ftServer™</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-application-story">Application Story</button>
+            </h2>
+            <div id="m-application-story" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="#" class="list-link">High-Tech Industry</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Manufacturing</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Infrastructure</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Oil & Petrochemicals</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Power & Utilities</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Metals & Mining</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Life Sciences</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-partners">Partners</button>
+            </h2>
+            <div id="m-partners" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="alliance-partners.html" class="ps-3">Alliance Partners</a></li>
+                  <li class="list-group-item"><a href="channel-partners.html" class="ps-3">Channel Partners</a></li>
+                  <li class="list-group-item"><a href="#" class="ps-3">System Integrators</a></li>
+                  <li class="list-group-item"><a href="#" class="ps-3">Partner Plan Overview</a></li>
+                  <li class="list-group-item"><a href="#" class="ps-3">Become a Partner</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-resourcehub">Resource Hub</button>
+            </h2>
+            <div id="m-resourcehub" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="document-library.html" class="list-link">Document Library</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Software Download Center</a></li>
+                  <li class="list-group-item"><a href="#" class="list-link">Training & Certification Courses</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m-aboutus">About Us</button>
+            </h2>
+            <div id="m-aboutus" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a class="list-link" href="about.html">About Senwaiy</a></li>
+                  <li class="list-group-item"><a class="list-link" href="locations.html">Locations</a></li>
+                  <li class="list-group-item"><a class="list-link" href="news.html">News Room</a></li>
+                  <li class="list-group-item"><a class="list-link" href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-auto bs-bg-dark text-white mobile-footer-links">
+          <a href="support.html" class="border-bottom">Support</a>
+          <a href="#" class="border-bottom">Orders & Licenses</a>
+          <a href="contact.html" class="">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero-basic text-white hero-banner">
+        <picture class="hero-bg-wrapper">
+          <source media="(min-width: 768px)" srcset="./assets/images/hero-banner/bg_banner_product_04.jpg" />
+          <img src="./assets/images/hero-banner/m_bg_banner_product_04.jpg" alt="Hero Banner" class="hero-bg-img" />
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative h-100 d-flex flex-column justify-content-center" style="z-index: 5">
+          <div class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                <li class="breadcrumb-item text-white" aria-current="page">Products & Solution</li>
+                <li class="breadcrumb-item text-white" aria-current="page">Our Products</li>
+                <li class="breadcrumb-item text-white" aria-current="page">Message Gateway System (MGS)</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="hero-banner-content">
+            <div class="row align-items-center">
+              <div class="col-11 col-lg-7 pb-2 pt-3">
+                <h1 class="hero-title fw-bold mb-1 mb-lg-3">Message Gateway System</h1>
+                <p class="hero-desc">Zero-Lag Factory Management: Automated Event Integration & Instant Notification.</p>
+                <!-- <a href="#" class="btn btn-light fw-bold px-4 py-2">Start your journey</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- page content -->
+      <div class="page-content mt-1 mt-lg-5">
+        <!-- 產品定義 (Product Definition) -->
+        <section class="definition-section">
+          <div class="container">
+            <div class="row gx-5 align-items-stretch">
+              <div class="col col-12">
+                <div class="text-content-warpper">
+                  <h2 class="">What is MGS ?</h2>
+                  <p>
+                    An Automated Real-time Notification Platform Built to End Alarm Fatigue MGS is an automated hub that integrates plant-wide events and enterprise alerts. In complex environments with scattered subsystems, it tackles the "boiling frog" crisis where critical warnings are often
+                    buried under information overload. Designed to eliminate notification delays, MGS ensures every vital anomaly is instantly recognized, removing the fear of missing crucial alerts during high-stakes operations.
+                  </p>
+                  <p class="mb-0">
+                    A Smart Cross-System Hub: Delivering the Right Message to the Right Person Moving beyond basic pagers, MGS is a smart hub supporting 7 channels, including LINE, Teams, SMS, and Voice. It unifies data across systems, transforming fragmented signals into actionable insights. By
+                    ensuring that the right message reaches the designated personnel, MGS resolves response inefficiencies at their source, significantly strengthening corporate operational resilience.
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="col col-12 col-sm-5 mt-3 mt-lg-1">
+                <div class="img-warpper">
+                  <img src="./assets/images/product/content_sw-aug_01.jpg" class="img-rounded" alt="..." />
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 特色 (Features) -->
+        <section class="feature-section bg-gray">
+          <div class="container">
+            <h2 class="">Features</h2>
+            <div class="card-grid">
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-paper-plane"></i></div>
+                <h4 class="card-title">Multi-channel Notification Dispatch</h4>
+                <p class="">Supports diverse channels like LINE, WeChat, Email, Voice, Teams, and Displays, ensuring every critical alert is delivered.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-industry"></i></div>
+                <h4 class="card-title">Flexible Site-wide Application</h4>
+                <p class="">Bridges enterprise communications and shop-floor equipment anomalies into a unified, automated management platform.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h4 class="card-title">Heterogeneous System Integration</h4>
+                <p class="">Seamlessly connects SCADA and ERP systems while supporting protocols like SQL, CSV, XML, and OPC DA/UA.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-gauge-high"></i></div>
+                <h4 class="card-title">Real-time Monitoring & Proactive Alerting</h4>
+                <p class="">Provides 24/7 monitoring across all endpoints; sends instant alerts upon anomaly detection to minimize response time.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-arrow-up-wide-short"></i></div>
+                <h4 class="card-title">Intelligent Hierarchical Escalation</h4>
+                <p class="">Dispatches alerts based on severity and automatically escalates to management if an issue remains unresolved.</p>
+              </div>
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-user-shield"></i></div>
+                <h4 class="card-title">Secure Group & Permission Management</h4>
+                <p class="">Features role-based access control and customizable recipient groups to ensure precise information delivery to the right person.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 運作方式 (How it Works) -->
+        <section class="how-it-works-section">
+          <div class="container">
+            <div class="row gx-5">
+              <div class="col col-12 col-sm-12">
+                <h2 class="">How MGS works</h2>
+                <p>
+                  MGS (Message Gateway System) leverages a robust technical architecture to seamlessly bridge scattered site signals and enterprise data. Through four key stages—Acquisition, Filtering, Dispatch, and Tracking—it establishes a fully automated monitoring loop, transforming chaotic
+                  information flows into precise actionable insights to maximize corporate response efficiency.
+                </p>
+
+                <div class="process-container">
+                  <div class="step-card">
+                    <div class="step-num bg-1">01</div>
+                    <h4>Data Acquisition & Integration</h4>
+                    <p>Collects real-time event signals from factory equipment, PLC/SCADA systems, or enterprise ERPs using protocols like OPC DA/UA, SQL databases, or APIs.</p>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h4>Intelligent Logic & Filtering</h4>
+                    <p>The system cross-references data with preset conditions, filtering out noise and prioritizing alerts based on severity and shift schedules.</p>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-num bg-1">03</div>
+                    <h4>Instant Multi-channel Dispatch</h4>
+                    <p>Transforms processed data into standardized messages and pushes them instantly to the designated personnel via 7 channels, including LINE, Teams, Voice, and SMS.</p>
+                  </div>
+                  <div class="step-card last-step">
+                    <div class="step-num">04</div>
+                    <h4>Automated Escalation & Tracking</h4>
+                    <p>If an alert remains unacknowledged, the system triggers an escalation to management. All dispatch and feedback logs are recorded for future analysis and optimization.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 效益 (Benefits) -->
+        <section class="benefits-section bg-gray">
+          <div class="container">
+            <h2 class="">Benefits</h2>
+            <div class="card-grid">
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-piggy-bank"></i></div>
+                <h4 class="card-title">Maximize Response Speed</h4>
+                <p class="">Instant alerts shorten MTTR and effectively reduce production losses caused by downtime.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-user-check"></i></div>
+                <h4 class="card-title">Eliminate Alarm Fatigue</h4>
+                <p class="">Smart filtering reduces noise and interruptions, focusing personnel on core tasks.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                <h4 class="card-title">Transparent Accountability</h4>
+                <p>Centralized logs streamline event tracking and ensure precise management accountability.</p>
+              </div>
+
+              <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4 class="card-title">Zero-Miss & High Resilience</h4>
+                <p>Multi-channel escalation ensures zero missed alerts, safeguarding corporate operational safety.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 系統相容性 (System Compatibility) -->
+        <section class="compatibility-section">
+          <div class="container">
+            <h2 class="">System Compatibility</h2>
+            <div class="summary-table-container">
+              <table class="summary-table table-border table-headless">
+                <thead>
+                  <tr>
+                    <th width="">Operating system</th>
+                    <th width="">Database</th>
+                    <th width="">Supported browsers</th>
+                    <th width="">Hardware requirements</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>Windows 10 / 11 Pro or above</li>
+                        <li>Windows Server 2016 or above; Standard / Data Center</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>Microsoft SQL Server 2016 or above; Express / Standard / Enterprise</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>Microsoft Edge</li>
+                        <li>Mozilla Firefox</li>
+                        <li>Google Chrome</li>
+                        <li>Safari</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="grid-list mb-0">
+                        <li>CPU：4 cores or higher, 2.4 GHz or above</li>
+                        <li>RAM：16 GB or above</li>
+                        <li>SSD with at least 500 GB</li>
+                        <li>Network：1 Gigabit Ethernet</li>
+                        <li>Display：1920 x 1080 or higher</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-desc text-center">※ For more details about MGS, welcome to download the brochure.</p>
+          </div>
+        </section>
+
+        <!-- 客戶案例 (Customer Cases) -->
+        <section class="story-intro-section bg-gray">
+          <div class="container">
+            <h2 class="text-left text-lg-center mb-2 mb-lg-3 mt-0">Customer story</h2>
+            <h3 class="text-left text-lg-center mb-2 mb-lg-5 mt-0">Precision Mfg Resilience: MGS Unified Automated Notifications</h3>
+            <div class="accordion-to-tabs" id="storyAccordion">
+              <div class="acc-item">
+                <div class="acc-header" id="heading-background">
+                  <button class="acc-button active" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-background">Background</button>
+                </div>
+                <div id="collapse-background" class="acc-collapse collapse show" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="row gx-5">
+                      <div class="col col-12 col-sm-7">
+                        <div class="intro-text">
+                          <p class="">The rise of Smart Cockpits makes automotive displays a cabin core. Global demand for quality and stability drives manufacturers toward smart management, utilizing digital tools to enhance resilience and meet ESG goals for a competitive edge.</p>
+                          <p class="mb-0">
+                            The client is a leading international manufacturer of automotive display glass, serving as an OEM for top-tier brands like Continental and BMW. Their facility operates highly complex automated lines, including motherboard cutting, CNC edge grinding, AR (Sputtering)
+                            washing/screen printing, and ASAG (Anti-fingerprint spraying). The operation relies heavily on real-time monitoring and high-precision equipment maintenance.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col col-12 col-sm-5 mt-3 mt-lg-1">
+                        <div class="img-warpper">
+                          <img src="./assets/images/product/content_sw-mgs_01.jpg" class="img-rounded" alt="..." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <div class="acc-header" id="heading-challenge">
+                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-challenge">Challenge</button>
+                </div>
+                <div id="collapse-challenge" class="acc-collapse collapse" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="intro-text">
+                      <p class="mb-1">In high-precision manufacturing, any monitoring oversight can jeopardize production uptime and strict quality standards. The client faced several critical challenges during their digital transition :</p>
+                      <ul class="crosshairs-list">
+                        <li>
+                          <p class="mb-0">Delayed Emergency Response</p>
+                          <p class="">The lack of instant notifications hindered rapid reaction to equipment anomalies, leading to costly unplanned downtime.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Manual Maintenance Risks</p>
+                          <p class="">Relying on manual tracking for vast equipment arrays led to missed maintenance schedules and frequent component failures.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Lack of Data Visibility</p>
+                          <p class="">Isolated energy consumption data across departments created information silos, hindering energy-saving and ESG targets.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <div class="acc-header" id="heading-solution">
+                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-solution">Solution</button>
+                </div>
+                <div id="collapse-solution" class="acc-collapse collapse" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="intro-text">
+                      <p class="mb-1">Implementing MGS as the central hub to integrate equipment signals and systems, creating an automated and transparent notification network :</p>
+                      <ul class="step-list">
+                        <li>
+                          <p class="mb-0">Instant Anomaly Alerts</p>
+                          <p class="">Pushes real-time alerts (CNC, AR, ASAG) via LINE, ensuring immediate response to equipment anomalies.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Preventive Maintenance</p>
+                          <p class="mb-0">Automated reminders for routine maintenance shift operations from reactive repairs to proactive prevention.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Transparent Utility Reporting</p>
+                          <p class="mb-0">Broadcasts water and electricity cost reports, ensuring visibility to drive departmental energy-saving goals.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Efficient ERP Broadcasting</p>
+                          <p class="mb-0">Syncs with ERP for rapid delivery of administrative news, optimizing corporate internal communication.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <div class="acc-header" id="heading-benefits">
+                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-benefits">Benefits</button>
+                </div>
+                <div id="collapse-benefits" class="acc-collapse collapse" data-bs-parent="#storyAccordion">
+                  <div class="acc-body">
+                    <div class="intro-text">
+                      <p class="">Through MGS digital management, the client enhanced operational resilience and global competitiveness, achieving dual optimization of efficiency and ESG goals :</p>
+                      <ul class="check-list">
+                        <li>
+                          <p class="mb-0">50% Faster Response</p>
+                          <p class="">Hierarchical notifications eliminate communication delays, doubling the speed of anomaly handling.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Reliable Production Uptime</p>
+                          <p class="mb-0">Significantly reduced missed maintenance incidents, effectively preventing production halts due to equipment failure.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">80% ESG Achievement</p>
+                          <p class="mb-0">Transparent energy data drove collective saving efforts, boosting target achievement rates from 50% to 80%.</p>
+                        </li>
+                        <li>
+                          <p class="mb-0">Global Competitive Edge</p>
+                          <p class="mb-0">Smart management won deep trust from brands like BMW and Continental, securing multiple high-value international orders.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-expert" style="background-image: linear-gradient(to right, rgba(4, 22, 31, 0.7) 0%, rgba(4, 22, 31, 0.1) 50%, rgba(0, 0, 0, 0) 100%), url('./assets/images/basic/bg_content-expert_01.jpg'); background-size: cover; background-position: center center">
+          <div class="container">
+            <div class="expert-card-wrapper d-flex">
+              <div class="expert-card">
+                <p class="expert-card-tagline"><span class="dot-indicator"></span>Begin Your Smart Factory Journey</p>
+                <h2 class="expert-card-title fw-bold">Connect with Our Experts</h2>
+                <p class="expert-card-text">To learn more about how we plan, integrate, and build automation and smart factory systems tailored to your needs. Feel free to contact our experts!</p>
+                <a href="contact.html" class="btn btn-expert">Let's Talk</a>
+                <a href="download/product-brochure/S1_Brochure_MGS_EN_251121.pdf" class="btn btn-outline-expert" target="_blank">Download Brochure </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white-50">
+      <div class="container py-3 py-lg-5">
+        <div class="row">
+          <!-- logo、Contact Information -->
+          <div class="col-12 col-lg-4 basic-info-container">
+            <div class="footer-branding">
+              <a class="fw-bold fs-4 text-light me-auto" href="#"><img src="./assets/images/basic/logo_Senwaiy.svg" alt="Senwaiy" height="36" class="footer-logo d-inline-block d-inline-block align-middle me-1 mb-1" />Senwaiy</a>
+            </div>
+            <p class="footer-desc mt-0 p-1">Overcome efficiency, productivity, safety and costs challenges through automation and integration solutions with Senwaiy.</p>
+            <div>
+              <p class="fw-bold mb-2">Get in Touch with Senwaiy Singapore</p>
+              <div class="footer-contact-info">
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
+                    <a class="footer_link" href="mailto:info@senwaiytech.com" title="sending the email"><i class="footer_link-icon fa-solid fa-envelope"></i><span class="footer_link-text">info@senwaiytech.com</span></a>
+                  </div>
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
+                    <a class="footer_link mb-2" href="tel:+65-6993-5188" title="make a phone call"><i class="footer_link-icon fas fa-phone-alt"></i><span class="footer_link-text">+65-6993-5188</span></a>
+                  </div>
+                </div>
+                <a class="footer_link mb-2" href="https://maps.app.goo.gl/i12ESiq9sxoMmF4Q7" title="address"><i class="footer_link-icon fa-solid fa-location-dot"></i><span class="footer_link-text">No. 21 Bukit Batok Crescent #13-77, Wcega Tower, Singapore 658065</span></a>
+              </div>
+            </div>
+            <div class="footer-social-links d-flex gap-3 pt-2">
+              <a href="https://www.linkedin.com/company/senwaiy" target="_blank" aria-label="LinkedIn" class="text-white-50">
+                <i class="fa-brands fa-square-linkedin"></i>
+              </a>
+              <a href="https://www.youtube.com/@Senwaiy" target="_blank" aria-label="YouTube" class="text-white-50">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-12 col-lg-8 quick-links-container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h6 class="footer-column-title">Products & Solution</h6>
+                <ul class="footer-link-list">
+                  <li><a href="sw-aug.html">Automatic Universal Gateway (AUG)</a></li>
+                  <li><a href="sw-cgw.html">Controller Gateway (CGW)</a></li>
+                  <li><a href="sw-inspec.html">Inspec</a></li>
+                  <li><a href="sw-mgs.html">Message Gateway System (MGS)</a></li>
+                  <li><a href="sw-modbus-gateway.html">Modbus Gateway</a></li>
+                  <li><a href="sw-rgs.html">Report Generator System (RGS)</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-3">
+                <h6 class="footer-column-title">Partners</h6>
+                <ul class="footer-link-list">
+                  <li><a href="#">Program Overview</a></li>
+                  <li><a href="alliance-partners.html">Alliance Partners</a></li>
+                  <li><a href="channel-partners.html">Channel Partners</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-3">
+                <h6 class="footer-column-title">Company</h6>
+                <ul class="footer-link-list">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="locations.html">Locations</a></li>
+                  <li><a href="news.html">News Room</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-copyright">
+        <p class="mb-0 text-center">©2025 Senwaiy Tech. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./assets/libs/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/style/style.js"></script>
+    <script src="./assets/style/tab.js"></script>
+  </body>
+</html>
