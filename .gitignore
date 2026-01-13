@@ -1,0 +1,7 @@
+# Ignore PSD source files
+PSD/
+
+# Node modules, OS files (optional)
+node_modules/
+.DS_Store
+Thumbs.db
