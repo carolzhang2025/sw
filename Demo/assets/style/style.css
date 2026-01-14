@@ -1135,14 +1135,15 @@ ul.crosshairs-list li::before {
 /* feature-section card*/
 main .feature-section,
 main .benefits-section,
-main .industry-section {
+main .img-card-container {
   padding: 40px 20px;
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
 }
+
 @media (max-width: 991.98px) {
   main .feature-section .container,
   main .benefits-section .container,
-  main .industry-section .container {
+  main .img-card-container .container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1150,16 +1151,17 @@ main .industry-section {
 
 main .feature-section .card-grid,
 main .benefits-section .card-grid,
-main .industry-section .card-grid {
+main .img-card-container .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 桌面端四欄 */
   gap: 20px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
+  margin: 0 0;
 }
 main .feature-section .card,
 main .benefits-section .card,
-main .industry-section .card {
+main .img-card-container .card {
   background: #fff;
   padding: 30px 20px;
   border-radius: 12px;
@@ -1169,23 +1171,39 @@ main .industry-section .card {
   border: 1px solid #eee;
   font-size: 1.15rem;
 }
+main .img-card-container .card {
+  padding: 0;
+  border: 1px solid #d4d4d4;
+}
+main .img-card-container .card [class^="card-img"] {
+  border-radius: 11px 11px 0 0;
+}
+main .img-card-container .card .card-body {
+  padding: 10px 20px 15px 20px;
+}
+main .img-card-container .card .card-body h4 {
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 5px 0;
+}
 main .feature-section .card:hover,
 main .benefits-section .card:hover,
-main .industry-section .card:hover {
+main .img-card-container .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
   border-color: #3498db;
 }
 main .feature-section .icon-box,
 main .benefits-section .icon-box,
-main .industry-section .icon-box {
+main .img-card-container .icon-box {
   font-size: 50px;
   margin-bottom: 5px;
   color: var(--sw-icon1-color);
 }
 main .feature-section .card h4,
 main .benefits-section .card h4,
-main .industry-section .card h4 {
+main .img-card-container .card h4 {
   margin: 10px 0 5px 0;
   color: #192f5a;
   display: block;
@@ -1197,34 +1215,39 @@ main .industry-section .card h4 {
   margin-bottom: 10px;
   font-family: var(--sw-title-font-family);
 }
-main .feature-section p,
-main .benefits-section p,
-main .industry-section p,
-main .industry-section ul li {
+main .feature-section .card p,
+main .benefits-section .card p,
+main .img-card-container .card p,
+main .img-card-container .card ul li {
   font-size: 0.9rem;
   color: #272729;
   line-height: 1.6;
   margin-bottom: 8px;
+}
+main .img-card-container img {
+  max-height: 250px;
 }
 
 /* 平板調整 */
 @media (max-width: 1024px) {
   main .feature-section .card-grid,
   main .benefits-section .card-grid,
-  main .industry-section .card-grid {
+  main .img-card-container .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 /* 手機調整 */
 @media (max-width: 600px) {
   main .feature-section .card,
-  main .benefits-section .card,
-  main .industry-section .card {
+  main .benefits-section .card {
     padding: 10px 15px;
+  }
+  main .img-card-container .card {
+    padding: 0;
   }
   main .feature-section .card-grid,
   main .benefits-section .card-grid,
-  main .industry-section .card-grid {
+  main .img-card-container .card-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1557,7 +1580,7 @@ main .expert-card-wrapper .btn-outline-expert:hover {
 main .process-container {
   display: flex;
   gap: 35px; /* 卡片之間的間距，要留空間給箭頭 */
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0px auto;
   padding: 20px 5px;
 }
