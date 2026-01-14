@@ -17,6 +17,12 @@
         main .industry-section .card-grid {
           grid-template-columns: repeat(3, 1fr);
         }
+        main .capabilities-section .card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      main .capabilities-section img {
+        max-height: 150px;
       }
     </style>
   </head>
@@ -400,8 +406,8 @@
     <main>
       <section class="hero-basic text-white hero-banner">
         <picture class="hero-bg-wrapper">
-          <source media="(min-width: 768px)" srcset="./assets/images/hero-banner/bg_banner_index_01.jpg" />
-          <img src="./assets/images/hero-banner/m_bg_banner_index_01.jpg" alt="Hero Banner" class="hero-bg-img" />
+          <source media="(min-width: 768px)" srcset="./assets/images/hero-banner/bg_banner_about_01.jpg" />
+          <img src="./assets/images/hero-banner/m_bg_banner_about_01.jpg" alt="Hero Banner" class="hero-bg-img" />
         </picture>
         <div class="hero-overlay"></div>
         <div class="container position-relative h-100 d-flex flex-column justify-content-center" style="z-index: 5">
@@ -420,7 +426,7 @@
               <div class="col-11 col-lg-7 pb-2 pt-3">
                 <h1 class="hero-title fw-bold mb-1 mb-lg-3">About Senwaiy Tech</h1>
                 <p class="hero-desc">Premier FMCS & Industrial Automation Solutions in ASEAN.</p>
-                <a href="#" class="btn btn-light fw-bold px-4 py-2">Start your journey</a>
+                <!-- <a href="#" class="btn btn-light fw-bold px-4 py-2">Start your journey</a> -->
               </div>
             </div>
           </div>
@@ -451,7 +457,8 @@
             </div>
           </div>
         </section>
-        <section class="bg-gray">
+
+        <section class="industry-section img-card-container bg-gray">
           <div class="container">
             <div class="row gx-5">
               <div class="col col-12 col-sm-12">
@@ -459,147 +466,134 @@
                 <p>At SENWAIY TECH, we build critical infrastructure for industry leaders. Our track record spans across high-tech electronics, public infrastructure, and process manufacturing.</p>
               </div>
             </div>
-            <div class="industry-section">
-              <div class="card-grid">
-                <div class="card">
-                  <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+
+            <div class="card-grid">
+              <div class="card">
+                <img src="assets/images/about/content_about_02.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <!-- <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div> -->
                   <h4 class="card-title">Semiconductor & High-Tech Manufacturing</h4>
                   <p class="text-start">We support the giants of the semiconductor industry with precision FMCS and power monitoring solutions, ensuring zero downtime for critical processes.</p>
-                  <ul class="text-start">
-                    <li class="">Foundry Leaders : TSMC /SSMC, UMC, VIS / VSMC</li>
-                    <li>Memory & Components : Micron, Yageo, Elite Material</li>
-                    <li>EMS & Technology : Wistron , Pegatron</li>
+                  <ul class="text-start mb-0">
+                    <li>Foundry Leaders : TSMC /SSMC, UMC, VIS / VSMC.</li>
+                    <li>Memory & Components : Micron, Yageo, Elite Material.</li>
+                    <li>EMS & Technology : Wistron , Pegatron.</li>
                   </ul>
                 </div>
-                <div class="card">
-                  <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-                  <h4 class="card-title">Browser-Based Configuration</h4>
-                  <p class="">Configuration via web browser eliminates software installation, significantly streamlining on-site deployment.</p>
+              </div>
+
+              <div class="card">
+                <img src="assets/images/about/content_about_03.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <!-- <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div> -->
+                  <h4 class="card-title">Critical Infrastructure & Public Utilities</h4>
+                  <p class="text-start">We serve the backbone of Taiwan's transportation and energy sectors.</p>
+                  <ul class="text-start mb-0">
+                    <li>Transport : Taiwan Taipei Metro, Taiwan Taoyuan International Airport.</li>
+                    <li>Energy : Taiwan Power Company (Taipower).</li>
+                  </ul>
                 </div>
-                <div class="card">
-                  <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                  <h4 class="card-title">Standalone Embedded Architecture</h4>
-                  <p class="">Non-PC architecture avoids risks from OS updates or DCOM issues, ensuring superior system stability.</p>
+              </div>
+
+              <div class="card">
+                <img src="assets/images/about/content_about_04.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <!-- <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div> -->
+                  <h4 class="card-title">Process Industries & FMCG</h4>
+                  <p class="text-start">From petrochemicals to food and beverage, we optimize production environments for safety and consistency.</p>
+                  <ul class="text-start mb-0">
+                    <li>Petrochemical/Industrial : Chang Chun Group, CPC Taiwan, CSC Steel , Bridgestone, 3M.</li>
+                    <li>FMCG : PEPSI Taiwan, Quaker.</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="product-intro-section intro-w1">
+        <section class="">
           <div class="container">
-            <div class="accordion-to-tabs" id="productAccordion">
-              <div class="acc-item">
-                <div class="acc-header" id="heading-brand">
-                  <button class="acc-button active" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-brand">Brand Introduction</button>
+            <div class="row gx-5 align-items-stretch">
+              <div class="col col-12 col-sm-12">
+                <h2 class="">Regional Support: Singapore & Malaysia</h2>
+                <p>closely with regional leaders to ensure logistical precision and technical compliance.</p>
+              </div>
+              <div class="col col-12 col-sm-6">
+                <div class="text-content-warpper">
+                  <h3>Strategic Alliances</h3>
+                  <ul>
+                    <li>ISDN Holdings Limited : Leveraging ISDN’s engineering network in Asia, we execute large-scale industrial projects with verified reliability.</li>
+                    <li>IAM-Wonderware Sdn. Bhd. : Through our partnership with IAM-Wonderware, we provide fully supported, compliant AVEVA ecosystem solutions for clients in Malaysia and Singapore.</li>
+                  </ul>
                 </div>
-                <div id="collapse-brand" class="acc-collapse collapse show" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold"><span class="d-none d-lg-inline-block">Senwaiy Tech | </span> Designed for Multi-Industry Applications</h3>
-                    <div class="intro-text">
-                      <p class="">Senwaiy's product portfolio is specifically designed to support diverse industrial applications, delivering complete solutions from equipment connectivity and on-site operations to data monitoring and reporting.</p>
-                      <p class="mb-3">
-                        Our solutions are extensively deployed across semiconductor, high-tech manufacturing, food & beverage, petrochemical, and infrastructure sectors, enabling enterprises to enhance operational visibility, optimize workflows, and strengthen operational performance.
-                      </p>
-                    </div>
-                    <a href="product-overview-senwaiy.html" class="btn btn-outline-dark fw-bold px-4 py-2">Explore Senwaiy Products <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
+              </div>
+              <div class="col col-12 col-sm-6">
+                <h3>Local Responsiveness</h3>
+                <ul class="">
+                  <li>In Singapore : Immediate on-site engineering for wafer fabs and chemical plants in Pasir Ris and Jurong Island.</li>
+                  <li>In Malaysia : Supporting manufacturing clusters in Penang, Kulim, and Johor from our Singapore hub.</li>
+                </ul>
+              </div>
+              <!-- <div class="col col-12 col-sm-5 mt-3 mt-lg-1">
+                <div class="img-warpper">
+                  <img src="./assets/images/about/content_about_01.jpg" class="img-rounded" alt="..." />
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <section class="capabilities-section img-card-container bg-gray">
+          <div class="container">
+            <div class="row gx-5">
+              <div class="col col-12 col-sm-12">
+                <h2 class="">Core Engineering Capabilities</h2>
+              </div>
+            </div>
+
+            <div class="card-grid">
+              <div class="card">
+                <img src="assets/images/about/content_about_05.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h4 class="card-title">Industrial Automation & Control</h4>
+                  <p class="text-start">
+                    We implement fault-tolerant control architectures that stabilize production. From standalone PLC programming to plant-wide SCADA networks, our systems reduce human error. We integrate major brands (AVEVA, Siemens, Schneider, Rockwell, Mitsubishi) to create automated environments
+                    tailored to your manufacturing logic.
+                  </p>
                 </div>
               </div>
 
-              <div class="acc-item">
-                <div class="acc-header" id="heading-aug">
-                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-aug">Automatic Universal Gateway</button>
-                </div>
-                <div id="collapse-aug" class="acc-collapse collapse" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold">AUG｜Centralize Industrial Communication in One Platform</h3>
-                    <div class="intro-text">
-                      <p class="">AUG is a powerful industrial communication integration platform designed to connect systems, equipment, and PLCs using commonly adopted automation protocols.</p>
-                      <p class="mb-3">By eliminating the need for multiple drivers, AUG simplifies protocol conversion and enables real-time data to be seamlessly consolidated into centralized databases.</p>
-                    </div>
-                    <a href="sw-aug.html" class="btn btn-outline-dark fw-bold px-4 py-2">Discover AUG <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
+              <div class="card">
+                <img src="assets/images/about/content_about_06.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h4 class="card-title">Advanced FMCS</h4>
+                  <p class="text-start">
+                    For semiconductor and high-tech manufacturing, utility stability dictates production yield. Our FMCS (Facility Management Control System)centralizes control of HVAC, UPW, Gas, and Chemicals into a single command center. We provide 24/7 monitoring with millisecond-level precision
+                    to prevent downtime.
+                  </p>
                 </div>
               </div>
 
-              <div class="acc-item">
-                <div class="acc-header" id="heading-cgw">
-                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cgw">Controller Gateway</button>
-                </div>
-                <div id="collapse-cgw" class="acc-collapse collapse" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold">CGW｜Build a Reliable Foundation for IIoT</h3>
-                    <div class="intro-text">
-                      <p class="">CGW is an industrial smart communication gateway that supports more than 15 commonly used industrial protocols and enables connectivity via OPC UA and cloud platforms, forming a solid foundation for Industrial IoT (IIoT).</p>
-                      <p class="">Operating as a standalone platform, CGW reduces the need for multiple drivers on PCs, simplifies system architecture, and reliably aggregates and standardizes data from PLCs and field devices for seamless integration with SCADA and MES systems.</p>
-                    </div>
-                    <a href="sw-cgw.html" class="btn btn-outline-dark fw-bold px-4 py-2">Discover CGW <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
+              <div class="card">
+                <img src="assets/images/about/content_about_08.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <!-- <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div> -->
+                  <h4 class="card-title">Power Monitoring & Energy Management</h4>
+                  <p class="text-start">
+                    Rising energy costs and strict ESG mandates require precise visibility. We deploy Power Monitoring Systems (PMS) that go beyond simple metering. Our systems analyze power quality, detect harmonics, and provide granular data for ISO and IEC compliance, supporting your carbon
+                    footprint goals.
+                  </p>
                 </div>
               </div>
 
-              <div class="acc-item">
-                <div class="acc-header" id="heading-inspec">
-                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-inspec">Inspec</button>
-                </div>
-                <div id="collapse-inspec" class="acc-collapse collapse" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold">Inspec｜Paperless Inspections Made Simple</h3>
-                    <div class="intro-text">
-                      <p class="">Inspec is a smart inspection system that enables paperless and digitalized inspection workflows, supporting task assignment, accurate reporting, and automated report generation.</p>
-                      <p class="">By consolidating inspection data entered by field personnel, Inspec organizes and analyzes records into structured reports, allowing teams to track progress in real time via mobile devices and improve inspection efficiency and quality.</p>
-                    </div>
-                    <a href="sw-inspec.html" class="btn btn-outline-dark fw-bold px-4 py-2">Discover Inspec <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="acc-item">
-                <div class="acc-header" id="heading-mgs">
-                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-mgs">Message Gateway System</button>
-                </div>
-                <div id="collapse-mgs" class="acc-collapse collapse" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold">MGS｜Ensure Critical Alerts Are Never Missed</h3>
-                    <div class="intro-text">
-                      <p class="">MGS is an automated alarm and event notification solution that supports more than 10 delivery channels, enabling seamless integration of events and alarms across enterprise and plant environments.</p>
-                      <p class="">By classifying and grouping alarms based on predefined rules, MGS captures events from multiple sources and ensures the right notifications are delivered to the right people, preventing critical alerts from being missed.</p>
-                    </div>
-                    <a href="sw-mgs.html" class="btn btn-outline-dark fw-bold px-4 py-2">Discover MGS <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="acc-item">
-                <div class="acc-header" id="heading-mg">
-                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-mg">Modbus Gateway</button>
-                </div>
-                <div id="collapse-mg" class="acc-collapse collapse" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold">Modbus Gateway｜Standardize Modbus Data Across Systems</h3>
-                    <div class="intro-text">
-                      <p class="">A smart gateway specializing in Modbus communication, the Modbus Gateway enables seamless conversion between Serial and Ethernet interfaces.</p>
-                      <p class="">Struggling with multiple Modbus protocols and device connectivity? The Modbus Gateway simplifies operations and unlocks the full potential of your industrial connectivity.</p>
-                    </div>
-                    <a href="sw-modbus-gateway.html" class="btn btn-outline-dark fw-bold px-4 py-2">Discover Modbus Gateway <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="acc-item">
-                <div class="acc-header" id="heading-rgs">
-                  <button class="acc-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-rgs">Report Generator System</button>
-                </div>
-                <div id="collapse-rgs" class="acc-collapse collapse" data-bs-parent="#productAccordion">
-                  <div class="acc-body">
-                    <h3 class="intro-title fw-bold">RGS｜Turn Operational Data into Management Insights</h3>
-                    <div class="intro-text">
-                      <p class="">RGS is a centralized report generation system that consolidates operational data from multiple sources into standardized and visualized reports.</p>
-                      <p class="">By automating report creation and scheduling, RGS helps teams monitor performance, analyze trends, and support faster, more informed decision-making.</p>
-                    </div>
-                    <a href="sw-rgs.html" class="btn btn-outline-dark fw-bold px-4 py-2">Discover RGS <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                  </div>
+              <div class="card">
+                <img src="assets/images/about/content_about_05.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <!-- <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div> -->
+                  <h4 class="card-title">OT/IT System Integration</h4>
+                  <p class="text-start">
+                    Data silos block Industry 4.0 progress. SENWAIY TECH bridges Operational Technology (OT) and Information Technology (IT). We use industrial protocols (Modbus, OPC UA, MQTT) to enable seamless data flow from the factory floor to your MES, ERP, or Cloud platforms.
+                  </p>
                 </div>
               </div>
             </div>
